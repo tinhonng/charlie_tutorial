@@ -27,15 +27,16 @@
 </template>
 
 <template name="addForm">
-
-    <div class="form-group">
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input name="task" type="text" class="form-control" placeholder="to do...">
-            </div>
-            <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-    </div>
+    {{#if currentUser}}
+        <div class="form-group">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input name="task" type="text" class="form-control" placeholder="to do...">
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+    {{/if}}
 </template>
 
 
