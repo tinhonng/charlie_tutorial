@@ -1,0 +1,42 @@
+<head>
+  <meta charset="UTF-8">
+  <title>charlie example</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">ToDo List</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                {{> loginButtons}}
+            </ul>
+        </header>
+        {{> toDoList}}
+        {{> addForm}}
+    </div>
+</body>
+
+
+<template name="toDoList">
+    <ul class="list-group">
+        {{#each items}}
+            <li class="list-group-item">{{detail}}</li>
+        {{/each}}
+    </ul>
+</template>
+
+<template name="addForm">
+
+    <div class="form-group">
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input name="task" type="text" class="form-control" placeholder="to do...">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    </div>
+</template>
+
+
+
